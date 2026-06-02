@@ -360,7 +360,7 @@ def process_section_depth(section_dir, window_size=4):
     # ── Load model ────────────────────────────────────────────────────────────
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Loading DA3NESTED-GIANT-LARGE-1.1 on {device}...", flush=True)
-    model_path = "./models/DA3NESTED-GIANT-LARGE-1.1"
+    model_path = "../models/DA3NESTED-GIANT-LARGE-1.1"
     model = DepthAnything3.from_pretrained(model_path).to(device)
     print("Model loaded!", flush=True)
 

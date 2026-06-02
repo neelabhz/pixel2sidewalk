@@ -35,7 +35,7 @@ SECTIONS = {
     "boston_south_end": "-71.0777,42.3383,-71.0697,42.3443",
 }
 
-BASE_DIR = Path("./data")
+BASE_DIR = Path("../data")
 MAX_WORKERS = 8
 
 # Fields to request from Mapillary — includes ALL needed metadata for the pipeline

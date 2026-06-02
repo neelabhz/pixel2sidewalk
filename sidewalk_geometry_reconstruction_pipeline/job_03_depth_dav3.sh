@@ -29,7 +29,7 @@ eval "$(conda shell.bash hook)"
 conda activate "$ENV_PATH"
 
 # Add the DA3 source package to PYTHONPATH
-export PYTHONPATH="./models/Depth-Anything-V3/src:$PYTHONPATH"
+export PYTHONPATH="../models/Depth-Anything-V3/src:$PYTHONPATH"
 
 SECTION=${1:-boston_backbay}
 

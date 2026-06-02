@@ -32,8 +32,8 @@ You will need to download the pre-trained weights for the two computer vision mo
 
 | Model | Purpose | Download Link | Placement Directory |
 |-------|---------|---------------|---------------------|
-| **DINOv3** | Sidewalk Masking | [DINOv3 HuggingFace](https://github.com/IDEA-Research/DINOv3) | `./models/` |
-| **Depth-Anything-V3** | Depth Estimation | [DA3 GitHub Repository](https://github.com/LiheYoung/Depth-Anything-V3) | `./models/Depth-Anything-V3/` |
+| **DINOv3** | Sidewalk Masking | [DINOv3 HuggingFace](https://github.com/facebookresearch/dinov3) | `./models/` |
+| **Depth-Anything-V3** | Depth Estimation | [DA3 GitHub Repository](https://github.com/bytedance-seed/depth-anything-3) | `./models/Depth-Anything-V3/` |
 
 *Ensure you download the `DA3NESTED-GIANT-LARGE-1.1` weights for maximum accuracy.*
 

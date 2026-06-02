@@ -22,7 +22,7 @@ echo ""
 SECTION=${1:-boston_backbay}
 
 your_conda_env_path/bin/python -u .//04_project_geometry.py \
-    --sections ./data/$SECTION \
+    --sections ../data/$SECTION \
     --depth-dir dav3_depth \
     --step 5.0 \
     --cam-dist 25.0 \

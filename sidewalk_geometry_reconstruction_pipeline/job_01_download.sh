@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=3900M
 #SBATCH --account=your_account_here  # TODO: Update with your cluster account
-#SBATCH --output=./data/download_%j.out
-#SBATCH --error=./data/download_%j.err
+#SBATCH --output=../data/download_%j.out
+#SBATCH --error=../data/download_%j.err
 
 echo "=========================================="
 echo "Phase 1: Download Mapillary Data"
@@ -24,7 +24,7 @@ echo "Activating environment: $ENV_PATH"
 eval "$(conda shell.bash hook)"
 conda activate "$ENV_PATH"
 
-cd ./data
+cd ../data
 
 SECTION=${1:-boston_south_end}
 
