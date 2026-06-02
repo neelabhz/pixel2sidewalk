@@ -1,0 +1,16 @@
+name: sidewalk_inventory
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - geopandas
+  - shapely
+  - pyproj
+  - networkx
+  - osmnx
+  - requests
+  - tqdm
+  - pillow
+  - pip
