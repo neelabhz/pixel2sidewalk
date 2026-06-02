@@ -8,7 +8,7 @@ The pipeline operates in four distinct phases:
 1. **Download Data:** Fetch 360-degree panoramas for a given bounding box via the Mapillary API.
 2. **Segmentation:** Process panoramas using DINOv3 (Detectron2) to generate binary masks isolating sidewalks.
 3. **Depth Estimation:** Predict metric depth maps using Depth-Anything-V3, skipping images that do not contain sidewalks.
-4. **Geometry Projection:** Reproject masked depth pixels into 3D world coordinates (EPSG:4326/EPSG:28992) and generate highly accurate spatial polygons.
+4. **Geometry Projection:** Reproject masked depth pixels into 3D world coordinates (EPSG:4326/EPSG:28992) and generate polygons.
 
 ## Setup & Requirements
 
