@@ -22,8 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 import time
 
-import os
-ACCESS_TOKEN = os.environ.get("MAPILLARY_CLIENT_TOKEN", "YOUR_API_KEY_HERE")
+ACCESS_TOKEN = os.environ.get("MAPILLARY_CLIENT_TOKEN")
 
 SIDEWALK_CLASSES = [
     "construction--flat--sidewalk",

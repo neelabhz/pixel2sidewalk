@@ -12,8 +12,7 @@ from pathlib import Path
 
 import osmnx as ox
 
-import os
-ACCESS_TOKEN = os.environ.get("MAPILLARY_CLIENT_TOKEN", "YOUR_API_KEY_HERE")
+ACCESS_TOKEN = os.environ.get("MAPILLARY_CLIENT_TOKEN")
 
 # ── Area Configuration ────────────────────────────────────────────────────────
 # Change BBOX and AREA_NAME here to run for any new city / district.
