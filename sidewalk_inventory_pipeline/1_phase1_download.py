@@ -3,10 +3,10 @@
 Phase 1: Download Mapillary Sidewalk Masks & Metadata
 Run on the login node (requires internet).
 
-Fixes applied:
-  - Fetches computed_compass_angle and computed_geometry (SfM-refined, more accurate)
-  - Fetches is_pano to flag panoramic images for different processing in Phase 2
-  - Fetches lanes and width from OSM-derived fields for offset calculation in Phase 3
+Downloads segmentation masks and camera metadata for each image
+in the study area. Uses SfM-refined compass angles and geometry
+where available, and flags panoramic images for special handling
+in Phase 2.
 """
 
 import os

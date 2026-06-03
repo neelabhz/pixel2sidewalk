@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 """
 Phase 3: Aggregate Point Detections onto OSM Road Centerlines (Topological)
-Maps point detections to OSM street centerlines without geometric offsetting.
+Maps point detections to OSM street centerlines using a topological approach.
 Supports 5m micro-chunking for high-resolution mapping.
-
-Core aggregation logic restored from the verified old script, adapted to
-single-line topological output (no parallel_offset).
 """
 
 import json

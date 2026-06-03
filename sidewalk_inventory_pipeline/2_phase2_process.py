@@ -3,11 +3,10 @@
 Phase 2: Process Downloaded Masks to Point Map (cardinal-aware, pano-aware)
 Run entirely offline on the compute cluster.
 
-Fixes applied:
-  - Uses best_compass_angle (computed SfM value where available, raw EXIF fallback)
-  - Uses best_geometry (computed SfM position where available)
-  - Branches on is_pano: perspective cameras get ±90° cardinal bearings;
-    panoramic images get 8-sector analysis covering all compass directions
+Uses SfM-refined compass angles (falling back to raw EXIF) and
+SfM-refined geometry. Branches processing based on camera type:
+perspective cameras use ±90° cardinal bearings, while panoramic
+images use 8-sector analysis covering all compass directions.
 """
 
 import sys
