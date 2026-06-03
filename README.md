@@ -47,10 +47,17 @@ pixel2sidewalk/
 ```
 
 ### API Keys
-Neither pipeline stores credentials in files. You must expose your Mapillary Developer token via your system environment variables before running the data download scripts:
+Both pipelines require a Mapillary Developer API Token. Register for free at [mapillary.com/developer](https://www.mapillary.com/developer), create an application, and copy your Client Token. Then set it as an environment variable before running:
 ```bash
 export MAPILLARY_CLIENT_TOKEN="your_token_here"
 ```
 
-### 2. Model Weights Placement
-For the **Geometry Reconstruction Pipeline**, you need to manually download pre-trained weights. Create a `models/` folder at the root of your repository (next to the pipeline folders) and place the models inside as detailed in the geometry pipeline README.
+### Model Weights
+The **Geometry Reconstruction Pipeline** requires two pre-trained models. Create a `models/` folder at the root of this repository and place the weights inside:
+
+| Model | Access | Link |
+|-------|--------|------|
+| **DINOv3** | Gated (request via Meta) | [GitHub](https://github.com/facebookresearch/dinov3) · [Meta Downloads](https://ai.meta.com/resources/models-and-libraries/dinov3-downloads/) · [HuggingFace (gated)](https://huggingface.co/facebook/dinov3-vit7b16-pretrain-lvd1689m) |
+| **Depth-Anything-V3** | Open | [GitHub](https://github.com/bytedance-seed/depth-anything-3) |
+
+> **Note:** DINOv3 weights are gated and must be requested through Meta's platform or HuggingFace. Depth-Anything-V3 weights are freely available.

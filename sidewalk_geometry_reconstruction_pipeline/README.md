@@ -28,14 +28,16 @@ Phase 1 requires a Mapillary Developer API Token to download imagery.
   ```
 
 ### 3. Model Weights
-You will need to download the pre-trained weights for the two computer vision models utilized in the pipeline.
+You will need to download the pre-trained weights for the two models used in the pipeline.
 
 | Model | Purpose | Download Link | Placement Directory |
 |-------|---------|---------------|---------------------|
-| **DINOv3** | Sidewalk Masking | [DINOv3 HuggingFace](https://github.com/facebookresearch/dinov3) | `./models/` |
-| **Depth-Anything-V3** | Depth Estimation | [DA3 GitHub Repository](https://github.com/bytedance-seed/depth-anything-3) | `./models/Depth-Anything-V3/` |
+| **DINOv3** | Sidewalk Masking | [GitHub](https://github.com/facebookresearch/dinov3) · [Meta Downloads](https://ai.meta.com/resources/models-and-libraries/dinov3-downloads/) · [HuggingFace (gated)](https://huggingface.co/facebook/dinov3-vit7b16-pretrain-lvd1689m) | `./models/` |
+| **Depth-Anything-V3** | Depth Estimation | [GitHub](https://github.com/bytedance-seed/depth-anything-3) | `./models/Depth-Anything-V3/` |
 
-*Ensure you download the `DA3NESTED-GIANT-LARGE-1.1` weights for maximum accuracy.*
+> **Note:** DINOv3 weights are gated — you need to request access through Meta's platform or HuggingFace before downloading. Depth-Anything-V3 weights are freely available.
+
+*Use the `DA3NESTED-GIANT-LARGE-1.1` checkpoint for best results.*
 
 ## Running the Pipeline
 

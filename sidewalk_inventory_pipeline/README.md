@@ -12,7 +12,7 @@ This pipeline handles the extraction of topological sidewalk inventory maps by d
 ## Setup
 
 1. **Environment:** Create the Conda environment using `conda env create -f environment.yml` and activate it.
-2. **API Key:** Set your Mapillary Developer API Token as an environment variable to allow image downloads:
+2. **API Key:** Register at [mapillary.com/developer](https://www.mapillary.com/developer) to get your Client Token. Then set it as an environment variable:
    ```bash
    export MAPILLARY_CLIENT_TOKEN="your_token_here"
    ```
