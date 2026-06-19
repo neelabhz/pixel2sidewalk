@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem-per-cpu=3900M
-#SBATCH --account=your_account_here  # TODO: Update with your cluster account
+#SBATCH --account=cluster_account
 #SBATCH --output=.//proj_cpu_%j.out
 #SBATCH --error=.//proj_cpu_%j.err
 
@@ -14,14 +14,14 @@
 eval "$(conda shell.bash hook)"
 conda activate depth_env
 
-echo "=== Phase 4: Projection (CPU only) ==="
+echo "=== Phase 5: Refined Projection (CPU only) ==="
 echo "Node: $(hostname)"
 echo "CPUs: $SLURM_CPUS_PER_TASK"
 echo ""
 
 SECTION=${1:-boston_backbay}
 
-your_conda_env_path/bin/python -u .//04_project_geometry.py \
+/path/to/conda/env/bin/python -u .//05_project_refined_geometry.py \
     --sections ../data/$SECTION \
     --depth-dir dav3_depth \
     --step 5.0 \
@@ -29,7 +29,7 @@ your_conda_env_path/bin/python -u .//04_project_geometry.py \
     --min-density 0.5
 
 echo ""
-echo "=== Phase 4 Complete ==="
+echo "=== Phase 5 Complete ==="
 echo "Output files:"
 ls -lh .//${SECTION}_*.geojson 2>/dev/null
 ls -lh .//${SECTION}_map.html 2>/dev/null

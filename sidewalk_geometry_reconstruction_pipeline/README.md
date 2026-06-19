@@ -8,7 +8,8 @@ The pipeline operates in four distinct phases:
 1. **Download Data:** Fetch 360-degree panoramas for a given bounding box via the Mapillary API.
 2. **Segmentation:** Process panoramas using DINOv3 (Detectron2) to generate binary masks isolating sidewalks.
 3. **Depth Estimation:** Predict metric depth maps using Depth-Anything-V3, skipping images that do not contain sidewalks.
-4. **Geometry Projection:** Reproject masked depth pixels into 3D world coordinates (EPSG:4326/EPSG:28992) and generate polygons.
+4. **Geometry Projection (Raw):** Reprojects masked depth pixels into an unfiltered 3D point cloud map (no constraints or post-processing).
+5. **Geometry Projection (Refined):** Projects depth into 3D world coordinates (EPSG:4326/EPSG:28992) with spatial constraints, smoothing, and generates polished polygons.
 
 ## Setup & Requirements
 
@@ -46,6 +47,7 @@ Execute the scripts sequentially for a specific bounding box (referred to as a `
 1. `python 01_download_data.py` (Downloads imagery for configured bounding boxes)
 2. `python 02_segment_masks.py` (Runs DINOv3 segmentation)
 3. `python 03_generate_depth_dav3.py` (Runs DA3 depth estimation)
-4. `python 04_project_geometry.py --sections ./data/your_section` (Projects to `.geojson`)
+4. `python 04_project_raw_geometry.py --sections ./data/your_section` (Raw unfiltered point-cloud map generation)
+5. `python 05_project_refined_geometry.py --sections ./data/your_section` (Refined geometry projection to `.geojson`)
 
 Alternatively, if you are running on a SLURM cluster, you can submit the included `job_*.sh` batch scripts.
