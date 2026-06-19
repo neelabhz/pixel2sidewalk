@@ -1,6 +1,6 @@
 # Pixel2Sidewalk
 
-Welcome to **Pixel2Sidewalk**, a repository containing state-of-the-art computer vision and spatial pipelines for mapping and reconstructing sidewalk geometry from 2D street-level panoramas (Mapillary).
+Welcome to **Pixel2Sidewalk**, a repository containing computer vision and spatial pipelines for mapping and reconstructing sidewalk geometry from street view images (Mapillary).
 
 This repository is organized into two distinct, standalone methodologies:
 
