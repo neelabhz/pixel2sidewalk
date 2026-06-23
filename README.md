@@ -61,3 +61,9 @@ The **Geometry Reconstruction Pipeline** requires two pre-trained models. Create
 | **Depth-Anything-V3** | Open | [GitHub](https://github.com/bytedance-seed/depth-anything-3) |
 
 > **Note:** DINOv3 weights are gated and must be requested through Meta's platform or HuggingFace. Depth-Anything-V3 weights are freely available.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
